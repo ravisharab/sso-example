@@ -1,0 +1,9 @@
+spring:
+  security:
+    oauth2:
+      resource server:
+        jwt:
+          issuer-uri: https://dev-e8hm4pfu1bxhyblr.us.auth0.com/
+          audiences: https://raviapi
+server:
+    port: 8081
