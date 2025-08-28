@@ -1,8 +1,11 @@
 package com.ravi.sso.example;
 
 
+import org.springframework.stereotype.Component;
+
 import java.util.*;
 
+@Component
 public class FirstNonRepeatingCharacter {
     public static void main(String[] args) {
 
@@ -14,7 +17,7 @@ public class FirstNonRepeatingCharacter {
         input.close();
     }
 
-    private static char firstNonRepeatingCharacterMethod(String str) {
+    static char firstNonRepeatingCharacterMethod(String str) {
         Map<Character, Integer> charCountMap = new LinkedHashMap<>();
         for (char c : str.toCharArray()) {
             if (charCountMap.containsKey(c)) {
@@ -24,8 +27,8 @@ public class FirstNonRepeatingCharacter {
             }
         }
         System.out.println(charCountMap);
-        for(Map.Entry<Character, Integer> entrySet: charCountMap.entrySet()){
-            if(entrySet.getValue() == 1){
+        for (Map.Entry<Character, Integer> entrySet : charCountMap.entrySet()) {
+            if (entrySet.getValue() == 1) {
                 return entrySet.getKey();
             }
         }
