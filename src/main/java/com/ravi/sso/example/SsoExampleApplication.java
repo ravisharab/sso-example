@@ -8,6 +8,7 @@ public class SsoExampleApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SsoExampleApplication.class, args);
+
 	}
 
 }
