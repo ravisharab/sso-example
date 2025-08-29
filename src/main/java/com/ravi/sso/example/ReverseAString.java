@@ -1,5 +1,8 @@
 package com.ravi.sso.example;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ReverseAString {
     public static void main(String[] args) {
         String str = "Hello, World!";
@@ -8,7 +11,7 @@ public class ReverseAString {
         System.out.println("Reversed String: " + reversedStr);
     }
 
-    private static String reverseString(String str) {
+    static String reverseString(String str) {
         String reversedString = new StringBuilder(str).reverse().toString();
         String originalString = str;
         if(originalString.equals(reversedString)){
